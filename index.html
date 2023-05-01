@@ -15,6 +15,51 @@
         <img src="Resources/rickgif.gif" alt="Lucky this image not loaded :)"><br>
         <em>My channel </em><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank ">Youtube</a>
     </p>
+    <title>Button Counter</title>
+    <style>
+      /* Center the button on the page */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Style the button */
+      button {
+        padding: 16px 24px;
+        font-size: 24px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="counter">Click me!</button>
+
+    <script>
+      // Get the button element
+      const button = document.getElementById('counter');
+
+      // Set the initial count to zero
+      let count = 0;
+
+      // Add a click event listener to the button
+      button.addEventListener('click', () => {
+        // Increase the count by one
+        count++;
+
+        // Play a sound
+        const sound = new Audio('button-click-sound.wav');
+        sound.play();
+
+        // Update the text of the button with the current count
+        button.innerText = count;
+      });
+    </script>
     <!-- <h2><Strong>Lists</Strong></h2>
     <ul>
         <li>This is the example of list (1)</li>
